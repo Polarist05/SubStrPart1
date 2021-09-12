@@ -10,7 +10,6 @@ int main() {
 	 cin >> s;
 	 int size = s.size();
 	 s = s + s;
-	 printf(" ");
 	for (int i = 1,j = 0; i < s.size(); i++, j++) {
 		while (s[i] != s[j]) {
 			if (j - 1 < 0) {
@@ -20,8 +19,9 @@ int main() {
 			j = v[j - 1];
 		}
 		if (j + 1 == size) {
-			printf("\n%d",i-size+1);
+			printf("%d",i-size+1);
 			return 0;
 		}
+		v.push_back(j+1);
 	}
 }
